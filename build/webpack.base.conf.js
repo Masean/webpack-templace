@@ -4,8 +4,8 @@ const  CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const PATHS = {
-    src: path.join(__dirname, './src'),
-    dist: path.join(__dirname, './dist'),
+    src: path.join(__dirname, '../src'),
+    dist: path.join(__dirname, '../dist'),
     assets: 'assets/'
   }
   
@@ -65,7 +65,7 @@ module.exports = {
                },{
                  loader: 'postcss-loader',
                  options: {sourceMap: true,
-                           config: {path: 'postcss.config.js'}}
+                           config: {path: `${PATHS.src}/js/postcss.config.js`}}
                },{
                  loader: 'sass-loader',
                  options: {sourceMap: true}
