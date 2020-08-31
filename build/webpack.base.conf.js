@@ -88,12 +88,12 @@ module.exports = {
 
     plugins: [
         new MiniCssExtractPlugin({
-            filename: `${PATHS.assets}css/[name].[hash].css`
+            filename: `${PATHS.assets}css/[name].[contenthash].css`
         }),
         new HtmlWebpackPlugin({
-            hash: false,
             template: `${PATHS.src}/index.html`,
-            filename: './index.html'
+            filename: './index.html',
+            inject: true
         }),
         new CopyWebpackPlugin({
             patterns: [
