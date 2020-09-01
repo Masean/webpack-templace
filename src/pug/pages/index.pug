@@ -1,0 +1,12 @@
+extends ../layout/main
+include ../utils/mixins
+
+block variables
+  - var title = 'Webpack + Pug';
+  - var description = 'Description for Webpack + Pug';
+  - var pageClass = 'index-page';
+
+block content
+    section
+      .container
+        +item('item title', 'item descr')

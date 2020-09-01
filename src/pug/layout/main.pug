@@ -1,0 +1,17 @@
+block variables
+
+
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    meta(name="description", content=description)
+ 
+  body(class=pageClass)
+    .wrapper
+      include ../includes/modules/header
+      .content-wrapper
+          block content
+      include ../includes/modules/footer
+    
