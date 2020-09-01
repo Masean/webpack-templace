@@ -63,7 +63,7 @@ module.exports = {
                },{
                 loader: 'postcss-loader',
                 options: {sourceMap: true,
-                          config: {path: 'postcss.config.js'}}
+                          config: {path: './postcss.config.js'}}
             },
                {
                 loader: 'sass-loader',
@@ -83,13 +83,18 @@ module.exports = {
                },{
                  loader: 'postcss-loader',
                  options: {sourceMap: true,
-                           config: {path: `${PATHS.src}/js/postcss.config.js`}}
+                           config: {path: `./postcss.config.js`}}
                },{
                  loader: 'sass-loader',
                  options: {sourceMap: true}
                }
            ]
         }]
+    },
+    resolve: {
+        alias: {
+            '~': 'src'
+        }
     },
 
     plugins: [
@@ -103,8 +108,8 @@ module.exports = {
         }),
         new CopyWebpackPlugin({
             patterns: [
-                { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
-                { from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts` },
+                { from: `${PATHS.src}/${PATHS.assets}img`, to: `${PATHS.assets}img` },
+                { from: `${PATHS.src}/${PATHS.assets}fonts`, to: `${PATHS.assets}fonts` },
                 { from: `${PATHS.src}/static`, to: "" }
             ]
           })
