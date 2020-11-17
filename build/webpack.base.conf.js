@@ -1,8 +1,8 @@
-const path = require('path')
-const fs = require('fs')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const  CopyWebpackPlugin = require('copy-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const path = require('path');
+const fs = require('fs');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const  CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 const PATHS = {
@@ -11,8 +11,8 @@ const PATHS = {
     assets: 'assets/'
   }
 
-  const PAGES_DIR = `${PATHS.src}/pug/pages/`
-  const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+  const PAGES_DIR = `${PATHS.src}/pug/pages/`;
+  const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'));
   
 
 module.exports = {
